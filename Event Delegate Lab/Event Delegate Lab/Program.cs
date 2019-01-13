@@ -1,15 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Event_Delegate_Lab
+namespace lab1
 {
-    class Program
+    public delegate string FirstDelegate(int x);
+
+    class DelegateTest
     {
-        static void Main(string[] args)
+        string name;
+
+        static void Main()
         {
+            FirstDelegate d1 = new FirstDelegate(StaticMethod);
+
+            DelegateTest instance = new DelegateTest();
+            instance.name = "My instance";
+            FirstDelegate d2 = new FirstDelegate(instance.InstanceMethod);
+
+            Console.WriteLine(d1(10));
+            Console.WriteLine(d2(5));
+
+        }
+
+        static string StaticMethod(int i)
+        {
+            return string.Format($"Static method: {i}");
+        }
+
+        string InstanceMethod(int i)
+        {
+            return string.Format($"{name} : {i}");
         }
     }
 }
