@@ -1,0 +1,16 @@
+[2019-01-27 오후 12:22:11]
+data select ok!
+.OleDbException (0x80004005): ORA-01017: 사용자명/비밀번호가 부적합, 로그온할 수 없습니다.
+   위치: System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   위치: System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   위치: System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   위치: System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   위치: System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   위치: System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   위치: System.Data.OleDb.OleDbConnection.Open()
+   위치: Login.FrmLogin.button1_Click(Object sender, EventArgs e) 파일 C:\GitHub\CSharp20181230\ADO.NET\Login\FrmLogin.cs:줄 23
+ retry, DbConnectionOptions userOptions)
+   위치: System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   위치: System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   위치: System.Data.OleDb.OleDbConnection.Open()
+   위치: Login.FrmLogin.button1_Click(Object sender, EventArgs e) 파일 C:\GitHub\CSharp20181230\ADO.NET\Login\FrmLogin.cs:줄 23
